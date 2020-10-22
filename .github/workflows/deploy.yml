@@ -16,9 +16,6 @@ jobs:
       - name: Install dependances
         run: npm install
 
-      - name: Run Lint
-        run: npm run lint
-
       - name: Build page
         run: npm run build
 
