@@ -13,11 +13,11 @@ jobs:
       - name: Init Nodejs
         uses: actions/setup-node@master
 
-      - name: Create React App
-        uses: npm install create-react-app
-
       - name: Install dependances
         run: npm install
+
+      - name: Create React App
+        run: npm install create-react-app
 
       - name: Build page
         run: npm run build
