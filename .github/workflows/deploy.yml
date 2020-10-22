@@ -17,7 +17,7 @@ jobs:
         run: npm install
 
       - name: Build page
-        run: npm run build
+        run: react-scripts build
 
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.6
