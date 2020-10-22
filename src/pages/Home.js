@@ -26,7 +26,7 @@ function Home() {
 
             <Header/>
 
-            <div className="home-content col-12">
+            <div className="home-content col-12 p-0">
 
                 <div className="col-8 home-first-content">
                     <h1>MORPHEE</h1>

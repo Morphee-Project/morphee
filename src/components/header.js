@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import logo from "../logo.svg";
+import { BrowserRouter, Link } from 'react-router-dom'
 
 class Menu extends React.Component {
 
@@ -8,8 +9,9 @@ class Menu extends React.Component {
             <header id="header">
                 <img src={logo} className="logo" alt="logo" />
                 <div className="links">
-                    <a href="#">Accueil</a>
+                    <a href="/home">Accueil</a>
                     <a href="#">Effet sur le corps</a>
+                    <Link to="/dashboard">Dashboard</Link>
                     <button>Connexion</button>
                 </div>
             </header>
