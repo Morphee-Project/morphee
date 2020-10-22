@@ -19,16 +19,13 @@ const data = {
 export default class BarExample extends React.Component {
     render() {
         return(
-            <div>
-                <h2>Bar Example (custom size)</h2>
+            <div className="d-flex align-items-center">
                 <Bar
                     data={data}
                     width={100}
                     height={50}
-                    options={{
-                        maintainAspectRatio: false
-                    }}
                 />
+                <span className="number">16%</span>
             </div>
         )
     }
