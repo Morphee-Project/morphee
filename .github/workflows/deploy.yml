@@ -7,17 +7,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Init project
-        uses: actions/checkout@v2
-
-      - name: Init Nodejs
+      - uses: actions/checkout@master
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
-
-      - name: Install dependances
-        run: npm install
-
-      - name: Build page
-        run: npm run build
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install and Test
+        run: |
+          yarn
+          yarn test
+        env:
+          CI: true
 
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.6
