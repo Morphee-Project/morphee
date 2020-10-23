@@ -2,21 +2,23 @@ import React from 'react';
 import logo from "../logo.svg";
 import {Doughnut} from "react-chartjs-2";
 import BarExample from "../components/bar";
+import Line from "../components/line"
 import Header from "../components/header"
 
 const data = {
+    labels: ['Sans médicaments', 'Consomme des médicaments'],
     datasets: [{
-        data: [300, 50, 100],
+        data: [300, 100],
         backgroundColor: [
-            '#FF6384',
-            '#36A2EB',
-            '#FFCE56'
+            '#f2889b',
+            '#4e508d'
         ],
         hoverBackgroundColor: [
-            '#FF6384',
-            '#36A2EB',
-            '#FFCE56'
-        ]
+            '#f2889b',
+            '#4e508d'
+        ],
+        borderColor: 'rgba(0, 0, 0, 0)',
+        color: '#FFFFFF'
     }]
 };
 
@@ -46,11 +48,11 @@ function Home() {
                         ac porttitor quam bibendum. Vivamus viverra risus non lacus mattis.
                     </p>
                     <div className="bar-container">
-                        <BarExample/>
+                        <Line/>
                     </div>
                 </div>
 
-                <div className="homme-middle-banner col-12 my-5 py-4">
+                <div className="home-middle-banner col-12 my-5 py-4">
                     <div className="col-4">
                         <h5>Temps moyen par nuit par individu en France</h5>
                         <span>345 minutes</span>
@@ -69,7 +71,7 @@ function Home() {
                     <div className="doughnut-container col-6">
                         <Doughnut data={data} maintainAspectRatio={false}/>
                     </div>
-                    <p className="col-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros lectus. Maecenas ullamcorper
+                    <p className="col-6 d-flex align-items-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros lectus. Maecenas ullamcorper
                         nulla a metus viverra aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada
                         fames ac turpis egestas. Nulla vel tempor quam. Nullam magna tellus, viverra commodo leo quis,
                         vulputate cursus urna. Duis dictum leo at commodo rhoncus. Nunc pulvinar mauris a nisi sagittis,

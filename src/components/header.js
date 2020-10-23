@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import logo from "../logo.svg";
+import logo from "../logo_morphee.png";
 import { BrowserRouter, Link } from 'react-router-dom'
 
 class Menu extends React.Component {
 
     render() {
         return(
-            <header id="header">
+            <header id="header" className="px-5">
                 <img src={logo} className="logo" alt="logo" />
                 <div className="links">
                     <a href="/home">Accueil</a>

@@ -3,15 +3,15 @@ import Header from "../components/header"
 import {Bar} from 'react-chartjs-2';
 
 const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
     datasets: [
         {
             label: 'Qualité du sommeil',
-            backgroundColor: 'rgba(255,99,132,0.2)',
-            borderColor: 'rgba(255,99,132,1)',
+            backgroundColor: 'rgba(242, 240, 206, 0.8)',
+            borderColor: 'rgba(242, 240, 206, 1)',
             borderWidth: 1,
-            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-            hoverBorderColor: 'rgba(255,99,132,1)',
+            hoverBackgroundColor: 'rgba(242, 240, 206, 0.4)',
+            hoverBorderColor: 'rgba(242, 240, 206, 1)',
             data: [65, 59, 80, 81, 56, 55, 40]
         }
     ]
@@ -27,7 +27,7 @@ const data2 = {
             borderWidth: 1,
             hoverBackgroundColor: 'rgba(255,99,132,0.4)',
             hoverBorderColor: 'rgba(255,99,132,1)',
-            data: [12, 10, 8, 8, 8, 8, 9]
+            data: [12, 11, 10, 9, 9, 9, 8]
         }
     ]
 };
