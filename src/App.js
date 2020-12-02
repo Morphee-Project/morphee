@@ -1,18 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Bar, Doughnut } from 'react-chartjs-2';
-import BarExample from '../src/components/bar'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 import HomePage from '../src/pages/Home'
+import Dashboard from "./pages/Dashboard";
 
 
 function App() {
   return (
-    <div className="App">
+      <Router>
 
-      <HomePage/>
+          <Switch>
+              <Route path="/home">
+                  <HomePage />
+              </Route>
+              <Route path="/dashboard">
+                  <Dashboard />
+              </Route>
+              <Route path="/">
+                  <HomePage />
+              </Route>
+          </Switch>
 
-    </div>
+      </Router>
   );
 }
 
