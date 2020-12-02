@@ -1,132 +1,323 @@
+$bleusombre: #0F1025;
+$bleunuit: #161C40;
+$rose: #F2889B;
+$light: #F2F0CE;
+$violet: #4e508d;
 
-
+html, body{
+  margin: 0;
+  padding: 0;
+  background: #0F1025;
+  overflow-x: hidden;
+  font-family: 'Azo Sans', sans-serif;
+}
+/*
+HEADER & FOOTER
+ */
 #header {
-    position: fixed;
-    top: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $bleusombre;
+  padding: 10px;
+
+  img {
+    width: 50px;
+  }
+
+  .links {
+    justify-items: flex-end;
+    a {
+      color: $rose;
+      margin: 0 15px;
+      font-family: 'Azo Sans', sans-serif;
+      font-weight: lighter;
+      text-decoration: none;
+      transition: 0.1s;
+      transition-delay: 0.1s;
+    }
+    a:hover {
+      color: #be6675;
+      transition: 0.1s;
+      transition-delay: 0.1s;
+    }
+    .connexion{
+      border: 1px solid #F2F0CE;
+      color: #F2F0CE;
+      padding: 2px 5px;
+      cursor: pointer;
+      transition: 0.2s;
+      transition-delay: 0.5ms;
+    }
+    .connexion:hover{
+      border: 1px solid $light;
+      background: $light;
+      color: $bleusombre;
+      transition: 0.2s;
+      transition-delay: 0.5ms;
+    }
+  }
+}
+#footer {
+  position: inherit;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $bleunuit;
+  padding: 10px 15px;
+
+  .footer-morphee{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-morphee img{
+    width: 150px;
+  }
+  .footer-morphee h2{
+    font-family: 'Azo Sans', sans-serif;
+    font-weight: bold;
+    font-size: 3.5vw;
+    color: $violet;
+    letter-spacing: 1.5vw;
+  }
+  .social-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 12%;
+  }
+  .social-icons a{
+    padding: 5px;
+  }
+}
+/*
+PAGE D'ACCUEIL
+ */
+#home {
+  position: relative;
+  background-color:$bleusombre;
+}
+.home-content {
+  padding: 0;
+  color: $violet;
+
+  .home-first-content {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 495px;
+    height: 48.8vw;
+    z-index: 1;
+  }
+  .home-first-content h1{
     width: 100%;
-    z-index: 10;
+    font-family: 'Azo Sans', sans-serif;
+    font-weight: bold;
+    font-size: 10vw;
+    color: $violet;
+    text-align: left;
+    letter-spacing: 2.5vw;
+  }
+
+  .home-first-content h5{
+    font-size: 20px;
+    text-align: justify;
+  }
+  .cloud1{
+    opacity: 0.1;
+    max-width: 1000px;
+    width: 60%;
+    z-index: 0;
+    position: absolute;
+    right: -50px;
+    top: 406px;
+    animation: moveCloud 40s linear infinite;
+    -webkit-animation: moveCloud 40s linear infinite;
+    -moz-animation: moveCloud 40s linear infinite;
+  }
+  .cloud2{
+    opacity: 0.1;
+    max-width: 700px;
+    width: 50%;
+    z-index: 0;
+    position: absolute;
+    left: -10%;
+    top: 10%;
+    animation-delay:7s;
+    -webkit-animation-delay:7s;
+    -moz-animation-delay: 7s;
+    animation: moveCloud 30s ease-in-out infinite;
+    -webkit-animation: moveCloud 30s ease-in-out infinite;
+    -moz-animation: moveCloud 30s ease-in-out infinite;
+  }
+  @keyframes moveCloud {
+    0% {
+      transform: translate(0px);
+    }
+    50% {
+      transform: translate(50px);
+    }
+    100% {
+      transform: translate(0px);
+    }
+  }
+  @-webkit-keyframes moveCloud {
+    0% {
+      transform: translate(0px);
+    }
+    50% {
+      transform: translate(50px);
+    }
+    100% {
+      transform: translate(0px);
+    }
+  }
+  @-moz-keyframes moveCloud {
+    0% {
+      transform: translate(0px);
+    }
+    50% {
+      transform: translate(50px);
+    }
+    100% {
+      transform: translate(0px);
+    }
+  }
+  #trouble-sommeil{
+    width: 100%;
+    text-align: right;
+  }
+  h2 {
+    display: inline-block;
+    font-family: 'Azo Sans', sans-serif;
+    font-weight: normal;
+    font-size: 3.5vw;
+    text-align: right;
+    margin: 10px 0 45px 0;
+    padding: 12px 0 ;
+    border-top: solid 1px $violet;
+    border-bottom: solid 1px $violet;
+  }
+
+  .home-section p{
+    font-size: 18px;
+    text-align: left;
+    max-width: 70%;
+    font-weight: 500;
+  }
+  .bar-container canvas{
+    width: 50% !important;
+    height: auto!important;
+    min-width: 600px;
+  }
+  .bar-container .number {
+    font-size: 3rem;
+    margin: 0 15px;
+    text-align: start;
+    border-top: 1px solid $light;
+  }
+
+  .home-middle-banner.col-12.my-5.py-4 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    color: $light;
+    width: 100%;
+    background-color: $bleunuit;
+    border-top: 1px solid $light;
+    border-bottom: 1px solid $light;
+  }
+  .home-middle-banner.col-12.my-5.py-4 .col-4{
+    min-width: 250px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .doughnut-container canvas{
+    width: 100% !important;
+    height: auto!important;
+  }
+  .home-section p{
     display: flex;
     align-items: center;
-    background-color: #0f1025;
-
-    img {
-        width: 100px;
-    }
-
-    .links {
-      position: absolute;
-      right: 0;
-      margin-right: 48px;
-      justify-items: flex-end;
-
-      a {
-        //color: #724559;
-        color: #f2889b;
-        margin: 0 15px;
-      }
-
-      button {
-        background-color: transparent;
-        border: solid 1px #f2889b;
-        padding: 4px 8px;
-        color: #f2889b;
-        margin-left: 30px;
-      }
-    }
+  }
 }
-
-#home {
-    position: relative;
-    background-color: #0f1025;
+/*
+PAGE EFFETS SUR LE CORPS
+ */
+#effect {
+  position: relative;
+  background-color:$bleusombre;
 }
-
-.home-content {
-
-    color: #4e508d;
-
-    .home-first-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      margin-left: 25px;
-        height: 100vh;
-    }
-    .home-first-content h1{
-      width: 100%;
-        font-size: 5rem;
-        color: #4e508d;
-        text-align: left;
-      letter-spacing: 11px;
-    }
-
-    .home-first-content h5{
-        font-size: 20px;
-        text-align: left;
-    }
-
-    h2 {
-      display: inline-block;
-      font-size: 3rem;
-      text-align: right;
-      margin: 10px 0 45px 0;
-      padding: 12px 0 ;
-      border-top: solid 1px #4e508d;
-      border-bottom: solid 1px #4e508d;
-    }
-
-    .home-section p{
-      font-size: 18px;
-      text-align: left;
-      max-width: 70%;
-      font-weight: 500;
-    }
-
-    .home-middle-banner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #0f1025;
-      background-color: #4e508d;
-
-      .col-4 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h5 {
-          font-size: 1.3rem;
-          text-align: center;
-        }
-        span {
-          font-size: 2rem;
-          font-weight: 600;
-        }
-      }
-    }
-
-    .bar-container canvas{
-      width: 50% !important;
-      height: auto!important;
-    }
-
-    .bar-container .number {
-      font-size: 5rem;
-      margin: 0 15px
-    }
-
-    .doughnut-container canvas{
-      width: 100% !important;
-      height: auto!important;
-    }
+.effect-content{
+  padding: 0;
+  color: $violet;
+  .effect-first-content{
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 495px;
+    height: 48.8vw;
+    z-index: 1;
+  }
+  .woman {
+    text-align: center;
+  }
+  .woman img{
+    max-width: 40%;
+    min-width: 20%;
+  }
+  #title{
+    width: 100%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .effect-first-content h1{
+    display: inline-block;
+    font-family: 'Azo Sans', sans-serif;
+    font-weight: normal;
+    font-size: 5vw;
+    text-align: right;
+    margin: 10px 0 15px 0;
+  }
+  .effect-first-content .subtitle{
+    width: 20vw;
+    height: 10px;
+    background: $violet;
+  }
+  .effect-first-content ul li{
+    font-size: 15px;
+    text-align: justify;
+    margin: 15px 0;
+  }
 }
-
+/*
+PAGE DASHBOARD
+ */
 #dashboard {
   position: relative;
   background-color: #0f1025;
   min-height: 100vh;
 }
-
 .dashboard-content {
 
   .dashboard-first-content {

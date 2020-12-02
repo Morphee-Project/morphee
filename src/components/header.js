@@ -7,12 +7,12 @@ class Menu extends React.Component {
     render() {
         return(
             <header id="header" className="px-5">
-                <img src={logo} className="logo" alt="logo" />
+                <a href="/home"><img src={logo} className="logo" alt="logo-morphee" /></a>
                 <div className="links">
-                    <a href="/home">Accueil</a>
-                    <a href="#">Effet sur le corps</a>
+                    <Link to="/home">Accueil</Link>
+                    <Link to="/effect">Effets sur le corps</Link>
                     <Link to="/dashboard">Dashboard</Link>
-                    <button>Connexion</button>
+                    <a href="#" className="connexion">Connexion</a>
                 </div>
             </header>
         )
