@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import HomePage from '../src/pages/Home'
 import Dashboard from "./pages/Dashboard";
+import Body from "./pages/Body"
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
               </Route>
               <Route path="/dashboard">
                   <Dashboard />
+              </Route>
+              <Route path="/body">
+                  <Body />
               </Route>
               <Route path="/">
                   <HomePage />
