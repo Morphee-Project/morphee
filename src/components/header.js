@@ -11,6 +11,7 @@ class Menu extends React.Component {
                 <div className="links">
                     <a href="/home">Accueil</a>
                     <a href="/body">Effet sur le corps</a>
+                    <a href="/quiz">Quiz</a>
                     <Link to="/dashboard">Dashboard</Link>
                     <button>Connexion</button>
                 </div>

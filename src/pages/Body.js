@@ -93,7 +93,7 @@ class Body extends Component {
 
                 <div className="body-content col-12">
                     <div>
-                        <h1>Les effets du manque sommeil sur votre corps</h1>
+                        <h1>Les efffets du manque sommeil sur votre corps</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida libero quis dolor elementum aliquam. Aenean vulputate nisi et eros fermentum, in pellentesque ipsum pharetra. Quisque egestas sollicitudin accumsan.</p>
                     </div>
                     <form onSubmit={this.handleSubmit}>

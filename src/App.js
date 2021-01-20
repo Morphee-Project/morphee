@@ -8,7 +8,8 @@ import {
 } from "react-router-dom";
 import HomePage from '../src/pages/Home'
 import Dashboard from "./pages/Dashboard";
-import Body from "./pages/Body"
+import Body from "./pages/Body";
+import Quiz from "./pages/Quiz"
 
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
               </Route>
               <Route path="/body">
                   <Body />
+              </Route>
+              <Route path="/quiz">
+                  <Quiz />
               </Route>
               <Route path="/">
                   <HomePage />
