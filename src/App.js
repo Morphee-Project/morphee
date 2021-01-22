@@ -3,13 +3,13 @@ import './App.css';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 import HomePage from '../src/pages/Home'
 import Dashboard from "./pages/Dashboard";
 import Body from "./pages/Body";
-import Quiz from "./pages/Quiz"
+import Effect from "./pages/Effect";
+import Quiz from "./pages/Quiz";
 
 
 function App() {
@@ -22,6 +22,9 @@ function App() {
               </Route>
               <Route path="/dashboard">
                   <Dashboard />
+              </Route>
+              <Route path="/effect">
+                  <Effect />
               </Route>
               <Route path="/body">
                   <Body />
