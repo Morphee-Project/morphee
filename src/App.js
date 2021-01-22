@@ -10,6 +10,7 @@ import HomePage from '../src/pages/Home'
 import Dashboard from "./pages/Dashboard";
 import Body from "./pages/Body";
 import Quiz from "./pages/Quiz"
+import Results from "./pages/Results"
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
           <Switch>
               <Route path="/home">
                   <HomePage />
+              </Route>
+              <Route path="/Results">
+                  <Results />
               </Route>
               <Route path="/dashboard">
                   <Dashboard />
