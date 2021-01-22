@@ -12,8 +12,9 @@ class Menu extends React.Component {
                     <a href="/home">Accueil</a>
                     <a href="/body">Effet sur le corps</a>
                     <a href="/quiz">Quiz</a>
+                    <Link to="/effect">Conséquences</Link>
                     <Link to="/dashboard">Dashboard</Link>
-                    <button>Connexion</button>
+                    <a href="#" className="connexion">Connexion</a>
                 </div>
             </header>
         )
