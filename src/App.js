@@ -9,6 +9,7 @@ import {
 import HomePage from '../src/pages/Home'
 import Dashboard from "./pages/Dashboard";
 import Effect from "./pages/Effect";
+import Body from "./pages/Body"
 
 
 function App() {
@@ -24,6 +25,11 @@ function App() {
               </Route>
               <Route path="/effect">
                   <Effect />
+              <Route path="/body">
+                  <Body />
+              </Route>
+              <Route path="/">
+                  <HomePage />
               </Route>
           </Switch>
 
