@@ -25,6 +25,7 @@ function App() {
               </Route>
               <Route path="/effect">
                   <Effect />
+              </Route>
               <Route path="/body">
                   <Body />
               </Route>
