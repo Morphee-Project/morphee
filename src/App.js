@@ -20,6 +20,9 @@ function App() {
               <Route path="/home">
                   <HomePage />
               </Route>
+              <Route path="/Results">
+                  <Results />
+              </Route>
               <Route path="/dashboard">
                   <Dashboard />
               </Route>
