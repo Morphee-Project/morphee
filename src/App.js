@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import Body from "./pages/Body";
 import Effect from "./pages/Effect";
 import Quiz from "./pages/Quiz";
+import Results from "./pages/Results";
 
 
 function App() {
