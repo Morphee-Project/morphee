@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Header from "../components/header"
 import {withRouter} from 'react-router-dom';
+import Footer from "../components/footer";
 
 
 class Quiz extends Component {
@@ -255,7 +256,7 @@ class Quiz extends Component {
                         </div>
                     }
                 </div>
-
+                <Footer/>
             </div>
         )
     }

@@ -15,7 +15,7 @@ const data = {
         data: [300, 100],
         backgroundColor: [
             '#f2889b',
-            '#4e508d'
+            '#F2F0CE'
         ],
         hoverBackgroundColor: [
             '#f2889b',
@@ -45,7 +45,7 @@ function Home() {
                 <div id="trouble-sommeil">
                     <h2>LES TROUBLES DU SOMMEIL</h2>
                 </div>
-                <div className="home-section col-12 py-5 d-flex flex-column">
+                <div className="home-section col-12 py-5 d-flex">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros lectus. Maecenas ullamcorper
                         nulla a metus viverra aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada
                         fames ac turpis egestas. Nulla vel tempor quam. Nullam magna tellus, viverra commodo leo quis,
@@ -72,7 +72,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="home-section col-12 py-5 d-flex">
+                <div className="home-section col-12 py-5 d-flex doughnut-section">
                     <div className="doughnut-container col-6">
                         <Doughnut data={data} maintainAspectRatio={false}/>
                     </div>

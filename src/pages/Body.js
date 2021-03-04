@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Header from "../components/header"
 import body_woman from "../img_femme_corps.png";
+import Footer from "../components/footer";
 
 class Body extends Component {
     constructor(props) {
@@ -143,7 +144,7 @@ class Body extends Component {
                             }
                     </div>
                 </div>
-
+                <Footer/>
             </div>
         );
     }

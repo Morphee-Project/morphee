@@ -7,7 +7,7 @@ $violet: #4e508d;
 html, body{
   margin: 0;
   padding: 0;
-  background: #0F1025;
+  background: $violet;
   overflow-x: hidden;
   font-family: 'Azo Sans', sans-serif;
 }
@@ -24,7 +24,7 @@ HEADER & FOOTER
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: $bleusombre;
+  background-color: $bleunuit;
   padding: 10px;
 
   img {
@@ -83,7 +83,7 @@ HEADER & FOOTER
     justify-content: center;
   }
   .footer-morphee img{
-    width: 150px;
+    width: 80px;
   }
   .footer-morphee h2{
     font-family: 'Azo Sans', sans-serif;
@@ -108,11 +108,12 @@ PAGE D'ACCUEIL
  */
 #home {
   position: relative;
-  background-color:$bleusombre;
+  background: $violet;
+
 }
 .home-content {
   padding: 0;
-  color: $violet;
+  color: $bleunuit;
 
   .home-first-content {
     padding-left: 15px;
@@ -129,7 +130,7 @@ PAGE D'ACCUEIL
     font-family: 'Azo Sans', sans-serif;
     font-weight: bold;
     font-size: 10vw;
-    color: $violet;
+    color: $bleunuit;
     text-align: left;
     letter-spacing: 2.5vw;
   }
@@ -210,26 +211,36 @@ PAGE D'ACCUEIL
     text-align: right;
     margin: 10px 0 45px 0;
     padding: 12px 0 ;
-    border-top: solid 1px $violet;
-    border-bottom: solid 1px $violet;
+    border-top: solid 2px $bleunuit;
+    border-bottom: solid 2px $bleunuit;
   }
 
-  .home-section p{
-    font-size: 18px;
-    text-align: left;
-    max-width: 70%;
-    font-weight: 500;
+  .home-section {
+    justify-content: center;
+    box-shadow: 1px 1px 1px rgba($bleusombre, 0.1);
+    flex-flow: row-reverse wrap;
+    p {
+      font-size: 18px;
+      text-align: justify;
+      font-weight: 500;
+      max-width: 900px;
+      padding: 0 50px;
+    }
   }
-  .bar-container canvas{
-    width: 50% !important;
-    height: auto!important;
-    min-width: 600px;
-  }
-  .bar-container .number {
-    font-size: 3rem;
-    margin: 0 15px;
-    text-align: start;
-    border-top: 1px solid $light;
+  .bar-container{
+    max-width: 600px;
+    background: $bleunuit;
+    canvas{
+      width: 50% !important;
+      height: auto!important;
+      min-width: 600px;
+    }
+    .number {
+       font-size: 3rem;
+       margin: 0 15px;
+       text-align: start;
+       border-top: 1px solid $light;
+     }
   }
 
   .home-middle-banner.col-12.my-5.py-4 {
@@ -242,6 +253,7 @@ PAGE D'ACCUEIL
     background-color: $bleunuit;
     border-top: 1px solid $light;
     border-bottom: 1px solid $light;
+    margin-bottom: 0 !important;
   }
   .home-middle-banner.col-12.my-5.py-4 .col-4{
     min-width: 250px;
@@ -249,6 +261,9 @@ PAGE D'ACCUEIL
     text-align: center;
   }
 
+  .doughnut-section{
+    background: $violet;
+  }
   .doughnut-container canvas{
     width: 100% !important;
     height: auto!important;
@@ -256,6 +271,8 @@ PAGE D'ACCUEIL
   .home-section p{
     display: flex;
     align-items: center;
+    color: $bleusombre;
+    text-align: justify;
   }
 }
 /*
@@ -263,11 +280,11 @@ PAGE EFFETS SUR LE CORPS
  */
 #effect {
   position: relative;
-  background-color:$bleusombre;
+  background-color:$violet;
 }
 .effect-content{
   padding: 0;
-  color: $violet;
+  color: $bleusombre;
   .effect-first-content{
     padding-left: 15px;
     display: flex;
@@ -302,7 +319,7 @@ PAGE EFFETS SUR LE CORPS
   .effect-first-content .subtitle{
     width: 20vw;
     height: 10px;
-    background: $violet;
+    background: $bleusombre;
   }
   .effect-first-content ul li{
     font-size: 15px;
@@ -421,7 +438,7 @@ PAGE DASHBOARD
 
 #body {
   position: relative;
-  background-color: #0f1025;
+  background-color: $violet;
 }
 
 .body-content {
@@ -430,14 +447,14 @@ PAGE DASHBOARD
   h1 {
     font-size: 2.8rem;
     font-weight: 600;
-    color: #4e508d;
+    color: $bleusombre;
     margin: 30px 0;
   }
 
   p {
     font-size: 1.3rem;
     font-weight: 400;
-    color: #4e508d;
+    color: $bleusombre;
   }
 
   .container-img {
@@ -482,7 +499,7 @@ PAGE DASHBOARD
 }
 
 #quiz {
-  background-color: #0f1025;
+  background-color: $violet;
 
   .container-quiz {
     display: flex;
@@ -517,7 +534,7 @@ PAGE DASHBOARD
       content: "";
       counter-increment: step;
       display: block;
-      background-color: #0f1025;
+      background-color: $violet;
       width: 13px;
       height: 13px;
       line-height: 1;
