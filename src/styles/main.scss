@@ -455,6 +455,19 @@ PAGE DASHBOARD
     font-size: 1.3rem;
     font-weight: 400;
     color: $bleusombre;
+    width: 60%;
+  }
+
+  form {
+    label {
+      font-size: 20px;
+      font-weight: 600;
+      display: block;
+      margin-top: 30px;
+    }
+    .submit {
+      display: none;
+    }
   }
 
   .container-img {
@@ -475,7 +488,7 @@ PAGE DASHBOARD
       display: none;
     }
     .block-1 {
-      top: 50%;
+      top: 15%;
       left: 50%;
     }
     .block-2 {
@@ -483,8 +496,8 @@ PAGE DASHBOARD
       left: 50%;
     }
     .block-3 {
-      top: 30%;
-      left: 40%;
+      top: 50%;
+      left: 50%;
     }
     .text-block {
       position: absolute;
@@ -494,6 +507,10 @@ PAGE DASHBOARD
       background-color: white;
       color: black;
       transition: all 1s ease-in-out;
+      min-width: 300px;
+      p {
+        width: 100%;
+      }
     }
   }
 }
@@ -688,11 +705,13 @@ PAGE DASHBOARD
 .content-results{
   color: #4e508d;
   margin-bottom: 3vh;
+  max-width: 650px;
 }
 .conseil-results{
   color: #4e508d;
   margin-bottom: 5vh;
   font-weight: bold;
+  max-width: 650px;
 
 }
 .retour{
