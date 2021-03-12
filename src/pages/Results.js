@@ -15,30 +15,7 @@ class Results extends Component{
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              answers: [
-                    {
-                        'nb': 0,
-                        'value': 1,
-                        'ratio': 1
-                    },
-                    {
-                        'nb': 1,
-                        'value': 2,
-                        'ratio': 1
-                    },
-                    {
-                        'nb': 2,
-                        'value': 1,
-                        'ratio': 1
-                    },
-                    {
-                        'nb': 3,
-                        'value': 1,
-                        'ratio': 1
-                    },
-
-              ]
-            
+              answers: JSON.parse(sessionStorage.getItem('answers'))
             })
           })
           .then(res => res.json())

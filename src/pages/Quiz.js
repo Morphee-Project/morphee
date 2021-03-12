@@ -19,6 +19,15 @@ class Quiz extends Component {
             showQ6: false
         };
 
+        var answersObject = [
+            {
+                'nb': 0,
+                'value': 0,
+                'ratio': 0
+            }
+        ];
+        window.sessionStorage.setItem('answers', JSON.stringify(answersObject));
+
     }
 
     showPreviousQuestion = event => {
@@ -43,7 +52,19 @@ class Quiz extends Component {
         let stateName = 'showQ' + questionIndex;
         let stateNameNext = 'showQ' + (parseInt(questionIndex) + 1);
 
-        sessionStorage.setItem('resultQuizQuestion' + questionIndex, questionValue);
+        var ratio = 1;
+        var answersObject = JSON.parse(sessionStorage.getItem('answers'));
+        var newEntry = {
+            'nb': questionIndex,
+            'value': questionValue,
+            'ratio': ratio,
+        };
+        var newIndex = answersObject.length;
+        answersObject[newIndex] = newEntry;
+
+        sessionStorage.setItem('answers', JSON.stringify(answersObject));
+
+        //sessionStorage.setItem('resultQuizQuestion' + questionIndex, questionValue);
 
         document.querySelector(`.progress-${parseInt(questionIndex) + 1}`).classList.add('active');
 
@@ -64,7 +85,19 @@ class Quiz extends Component {
         let questionValue = event.currentTarget.value;
         let questionIndex = event.currentTarget.dataset.question;
 
-        sessionStorage.setItem('resultQuizQuestion' + questionIndex, questionValue);
+        var ratio = 1;
+        var answersObject = JSON.parse(sessionStorage.getItem('answers'));
+        var newEntry = {
+            'nb': questionIndex,
+            'value': questionValue,
+            'ratio': ratio,
+        };
+        var newIndex = answersObject.length;
+        answersObject[newIndex] = newEntry;
+
+        sessionStorage.setItem('answers', JSON.stringify(answersObject));
+
+        //sessionStorage.setItem('resultQuizQuestion' + questionIndex, questionValue);
 
         this.props.history.push('/results');
 
