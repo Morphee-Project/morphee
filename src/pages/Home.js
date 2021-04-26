@@ -14,15 +14,15 @@ const data = {
     datasets: [{
         data: [300, 100],
         backgroundColor: [
-            '#f2889b',
-            '#F2F0CE'
+            '#46556C',
+            '#f2f2f2'
         ],
         hoverBackgroundColor: [
-            '#f2889b',
-            '#4e508d'
+            '#303A43',
+            '#E9C2C2'
         ],
         borderColor: 'rgba(0, 0, 0, 0)',
-        color: '#FFFFFF'
+        color: '#303A43'
     }]
 };
 
@@ -33,11 +33,9 @@ function Home() {
             <div className="home-content col-12 p-0">
 
                 <div className="col-8 home-first-content">
-                    <h1>MORPHEE</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros lectus. Maecenas ullamcorper
-                        nulla a metus viverra aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada
-                        fames ac turpis egestas.
-                    </h5>
+                    <h1>Votre compagnon du sommeil parfait</h1>
+                    <h5>Ouvrez les portes pour dormir en utilisant ces conseils simples</h5>
+                    <a href="#trouble-sommeil">Découvrir</a>
                 </div>
                 <img src={cloud1} className="cloud cloud1" alt="cloud1-morphee" />
                 <img src={cloud2} className="cloud cloud2" alt="cloud2-morphee" />

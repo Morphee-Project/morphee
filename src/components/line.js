@@ -6,7 +6,7 @@ const data = {
     legend : {
         display: true,
         labels: {
-            fontColor: 'rgb(255, 99, 132)'
+            fontColor: 'rgb(255,255,255)'
         }
     },
     datasets: [
@@ -37,7 +37,7 @@ const data = {
 const legend = {
     display: true,
         labels: {
-        fontColor: 'rgb(255, 99, 132)'
+        fontColor: 'rgb(29,29,38)'
     }
 }
 

@@ -1,16 +1,32 @@
 $bleusombre: #0F1025;
 $bleunuit: #161C40;
-$rose: #F2889B;
 $light: #F2F0CE;
 $violet: #4e508d;
+
+$rose: #cf9da9;
+$beige: #E9C2C2;
+$bleu: #46556C;
+$noir: #1d1d26;
+$gris: #303A43;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::after, *::before {
+  box-sizing: border-box;
+}
 
 html, body{
   margin: 0;
   padding: 0;
-  background: $violet;
+  background: #f2f2f2;
   overflow-x: hidden;
   font-family: 'Azo Sans', sans-serif;
 }
+
+
 /*
 HEADER & FOOTER
  */
@@ -24,43 +40,52 @@ HEADER & FOOTER
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: $bleunuit;
+  background-color: $beige;
   padding: 10px;
-
-  img {
-    width: 50px;
+  box-shadow: 1px 5px 5px rgba(1, 1, 5, .07);
+  #logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      width: 50px;
+    }
+    h2{
+      margin: 0 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $gris;
+      letter-spacing: .2vw;
+    }
   }
-
   .links {
     justify-items: flex-end;
     a {
-      color: $rose;
+      color: $gris;
       margin: 0 15px;
       font-family: 'Azo Sans', sans-serif;
-      font-weight: lighter;
+      font-weight: bold;
       text-decoration: none;
       transition: 0.1s;
       transition-delay: 0.1s;
-    }
-    a:hover {
-      color: #be6675;
-      transition: 0.1s;
-      transition-delay: 0.1s;
+      &:hover {
+        color: #f2f2f2;
+        transition: 0.1s;
+        transition-delay: 0.1s;
+      }
     }
     .connexion{
-      border: 1px solid #F2F0CE;
-      color: #F2F0CE;
-      padding: 2px 5px;
+      background: #f2f2f2;
+      color: $gris;
+      padding: 5px 15px;
+      border-radius: 20px;
       cursor: pointer;
       transition: 0.2s;
-      transition-delay: 0.5ms;
-    }
-    .connexion:hover{
-      border: 1px solid $light;
-      background: $light;
-      color: $bleusombre;
-      transition: 0.2s;
-      transition-delay: 0.5ms;
+      &:hover{
+        background: $gris;
+        color: #f2f2f2;
+        transition: 0.2s;
+      }
     }
   }
 }
@@ -73,7 +98,7 @@ HEADER & FOOTER
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: $bleunuit;
+  background-color: $beige;
   padding: 10px 15px;
 
   .footer-morphee{
@@ -89,8 +114,9 @@ HEADER & FOOTER
     font-family: 'Azo Sans', sans-serif;
     font-weight: bold;
     font-size: 3.5vw;
-    color: $violet;
-    letter-spacing: 1.5vw;
+    color: $gris;
+    letter-spacing: .2vw;
+    margin: 0 10px;
   }
   .social-icons{
     display: flex;
@@ -108,39 +134,57 @@ PAGE D'ACCUEIL
  */
 #home {
   position: relative;
-  background: $violet;
+  background: $beige;
 
 }
 .home-content {
   padding: 0;
-  color: $bleunuit;
+  color: $gris;
 
   .home-first-content {
     padding-left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 495px;
     height: 48.8vw;
     z-index: 1;
-  }
-  .home-first-content h1{
-    width: 100%;
-    font-family: 'Azo Sans', sans-serif;
-    font-weight: bold;
-    font-size: 10vw;
-    color: $bleunuit;
-    text-align: left;
-    letter-spacing: 2.5vw;
-  }
-
-  .home-first-content h5{
-    font-size: 20px;
-    text-align: justify;
+    h1{
+      width: 100%;
+      font-family: 'Azo Sans', sans-serif;
+      font-weight: bold;
+      font-size: 5vw;
+      color: $gris;
+      text-align: left;
+      padding-left: 3rem;
+    }
+    h5{
+       font-size: 20px;
+       text-align: justify;
+       padding-left: 3rem;
+        margin: 40px 0;
+     }
+    a{
+      background: #f2f2f2;
+      border-radius: 30px;
+      text-decoration: none;
+      color: $gris;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      padding: 10px 30px;
+      width: max-content;
+      margin-left: 3rem;
+      &:hover{
+        background: $gris;
+        color: #f2f2f2;
+        transition: 0.2s;
+      }
+    }
   }
   .cloud1{
-    opacity: 0.1;
+    opacity: 0.5;
     max-width: 1000px;
     width: 60%;
     z-index: 0;
@@ -152,7 +196,7 @@ PAGE D'ACCUEIL
     -moz-animation: moveCloud 40s linear infinite;
   }
   .cloud2{
-    opacity: 0.1;
+    opacity: 0.25;
     max-width: 700px;
     width: 50%;
     z-index: 0;
@@ -211,13 +255,14 @@ PAGE D'ACCUEIL
     text-align: right;
     margin: 10px 0 45px 0;
     padding: 12px 0 ;
-    border-top: solid 2px $bleunuit;
-    border-bottom: solid 2px $bleunuit;
+    color: $gris;
+    border-top: solid 2px $gris;
+    border-bottom: solid 2px $gris;
   }
 
   .home-section {
     justify-content: center;
-    box-shadow: 1px 1px 1px rgba($bleusombre, 0.1);
+    box-shadow: 1px 1px 1px rgba($gris, 0.1);
     flex-flow: row-reverse wrap;
     p {
       font-size: 18px;
@@ -229,7 +274,7 @@ PAGE D'ACCUEIL
   }
   .bar-container{
     max-width: 600px;
-    background: $bleunuit;
+    background: #f2f2f2;
     canvas{
       width: 50% !important;
       height: auto!important;
@@ -239,7 +284,7 @@ PAGE D'ACCUEIL
        font-size: 3rem;
        margin: 0 15px;
        text-align: start;
-       border-top: 1px solid $light;
+       border-top: 1px solid $gris;
      }
   }
 
@@ -248,12 +293,12 @@ PAGE D'ACCUEIL
     justify-content: center;
     align-items: flex-start;
     flex-flow: row wrap;
-    color: $light;
+    color: #f2f2f2;
     width: 100%;
-    background-color: $bleunuit;
-    border-top: 1px solid $light;
-    border-bottom: 1px solid $light;
-    margin-bottom: 0 !important;
+    background-color: $bleu;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    margin: 0 !important;
   }
   .home-middle-banner.col-12.my-5.py-4 .col-4{
     min-width: 250px;
@@ -262,7 +307,7 @@ PAGE D'ACCUEIL
   }
 
   .doughnut-section{
-    background: $violet;
+    background: $rose;
   }
   .doughnut-container canvas{
     width: 100% !important;
@@ -271,7 +316,7 @@ PAGE D'ACCUEIL
   .home-section p{
     display: flex;
     align-items: center;
-    color: $bleusombre;
+    color: $gris;
     text-align: justify;
   }
 }
@@ -280,11 +325,11 @@ PAGE EFFETS SUR LE CORPS
  */
 #effect {
   position: relative;
-  background-color:$violet;
+  background-color: $beige;
 }
 .effect-content{
   padding: 0;
-  color: $bleusombre;
+  color: $gris;
   .effect-first-content{
     padding-left: 15px;
     display: flex;
@@ -319,7 +364,7 @@ PAGE EFFETS SUR LE CORPS
   .effect-first-content .subtitle{
     width: 20vw;
     height: 10px;
-    background: $bleusombre;
+    background: $gris;
   }
   .effect-first-content ul li{
     font-size: 15px;
@@ -332,7 +377,7 @@ PAGE DASHBOARD
  */
 #dashboard {
   position: relative;
-  background-color: #0f1025;
+  background-color: $beige;
   min-height: 100vh;
 }
 .dashboard-content {
@@ -341,26 +386,26 @@ PAGE DASHBOARD
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 25px;
+    margin-left: 3rem;
     height: 100vh;
 
     h1{
       font-size: 3.5rem;
-      color: #4e508d;
+      color: $gris;
     }
 
     h2{
       font-size: 3.5rem;
       font-weight: 600;
-      color: #4e508d;
+      color: $gris;
     }
 
     a{
       font-size: 2.5rem;
       margin: 0 30px 0 0;
       padding: 0 8px;
-      border-bottom: solid 3px #f2889b;
-      color: #f2889b;
+      border-bottom: solid 3px #f2f2f2;
+      color: #f2f2f2;
     }
 
     a:hover{
@@ -372,34 +417,48 @@ PAGE DASHBOARD
 
     h5 {
       font-size: 3.5rem;
-      color: #4e508d;
+      color: $gris;
       width: 100%;
+      margin-left: 3rem;
     }
     button {
-      font-size: 1.8rem;
-      background-color: transparent;
+      background: #f2f2f2;
+      color: $gris;
+      padding: 5px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.2s;
       border: none;
-      padding: 4px 8px;
-      color: #f2889b;
-      margin-left: 30px;
-      text-align: left;
+      &:hover{
+        background: $gris;
+        color: #f2f2f2;
+        transition: 0.2s;
+      }
     }
 
     .btn-pink {
-      font-size: 1.8rem;
-      background-color: transparent;
-      border: solid 1px #f2889b;
-      padding: 4px 8px;
-      color: #f2889b;
+      background: $gris;
+      color: #f2f2f2;
+      padding: 5px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.2s;
+      border: none;
+      margin-left: 50px;
+      &:hover{
+        background: #f2f2f2;
+        color: $gris;
+        transition: 0.2s;
+      }
     }
     span {
       font-size: 1.8rem;
-      color: #f2889b;
+      color: $rose;
     }
 
     p{
       font-size: 18px;
-      color: #4e508d;
+      color: $gris;
     }
 
   }
@@ -412,24 +471,31 @@ PAGE DASHBOARD
       display: inline-block;
       padding: 50px;
       border-radius: 50%;
-      border: solid 15px #f2889b;
+      border: solid 15px $rose;
     }
 
     .gauge span{
       font-size: 2rem;
       font-weight: 800;
-      color: #f2889b;
+      color: $rose;
     }
   }
 
   .dashboard-alert {
     button {
-      font-size: 1.8rem;
-      background-color: transparent;
+      background: #f2f2f2;
+      color: $gris;
+      padding: 5px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.2s;
       border: none;
-      padding: 4px 8px;
-      color: #f2889b;
-      margin-left: 30px;
+      margin-left: 50px;
+      &:hover{
+        background: $gris;
+        color: #f2f2f2;
+        transition: 0.2s;
+      }
     }
   }
 
@@ -438,7 +504,7 @@ PAGE DASHBOARD
 
 #body {
   position: relative;
-  background-color: $violet;
+  background-color: $beige;
 }
 
 .body-content {
@@ -447,14 +513,14 @@ PAGE DASHBOARD
   h1 {
     font-size: 2.8rem;
     font-weight: 600;
-    color: $bleusombre;
+    color: $gris;
     margin: 30px 0;
   }
 
   p {
     font-size: 1.3rem;
     font-weight: 400;
-    color: $bleusombre;
+    color: $gris;
     width: 60%;
   }
 
@@ -483,7 +549,7 @@ PAGE DASHBOARD
       position: absolute;
       width: 20px;
       height: 20px;
-      background-color: #f2889b;
+      background-color: $rose;
       transition: all 1s ease-in-out;
       display: none;
     }
@@ -505,7 +571,7 @@ PAGE DASHBOARD
       left: 20px;
       padding: 15px;
       background-color: white;
-      color: black;
+      color: $gris;
       transition: all 1s ease-in-out;
       min-width: 300px;
       p {
@@ -516,16 +582,15 @@ PAGE DASHBOARD
 }
 
 #quiz {
-  background-color: $violet;
+  background-color: $beige;
 
   .container-quiz {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 110px);
-    margin-top: 110px;
-    color: white;
+    height: 100vh;
+    color: #f2f2f2;
   }
 
   #quiz-progressBar {
@@ -536,7 +601,7 @@ PAGE DASHBOARD
     counter-reset: step;
     li {
       list-style-type: none;
-      color: #f2889b;
+      color: $rose;
       text-transform: uppercase;
       font-size: 12px;
       width: auto;
@@ -551,13 +616,13 @@ PAGE DASHBOARD
       content: "";
       counter-increment: step;
       display: block;
-      background-color: $violet;
+      background-color: $bleu;
       width: 13px;
       height: 13px;
       line-height: 1;
       text-align: center;
       font-weight: 700;
-      border: 1px solid #f2889b;
+      border: 1px solid $rose;
       border-radius: 50%;
       z-index: 1;
       position: relative;
@@ -566,14 +631,14 @@ PAGE DASHBOARD
       content: "";
       width: 100%;
       height: 1px;
-      background: #f2889b;
+      background: $rose;
       position: absolute;
       left: 0;
       top: 6px;
     }
     li.active:before, li.active:after{
-      background: #f2889b;
-      color: #fff;
+      background: $rose;
+      color: #f2f2f2;
     }
   }
 
@@ -593,12 +658,12 @@ PAGE DASHBOARD
       height: 18px;
     }
     span {
-      color: white;
+      color: #f2f2f2;
       font-size: 14px;
       display: inline-block;
       width: auto;
       text-align: center;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid #f2f2f2;
       margin-left: 12px;
       text-transform: uppercase;
     }
@@ -630,26 +695,26 @@ PAGE DASHBOARD
       .quiz-response {
         width: 20%;
         min-width: 200px;
-        border: 1px solid white;
+        border: 1px solid #f2f2f2;
         font-size: 1rem;
         padding: 16px 25px;
         text-align: center;
         line-height: 1.1;
         background-color: transparent;
-        color: white;
+        color: #f2f2f2;
         cursor: pointer;
         margin: 0 8px 30px;
         transition: all 0.3s;
       }
       .quiz-response:hover {
-        color: black;
-        background-color: white;
+        color: $noir;
+        background-color: #f2f2f2;
       }
     }
   }}
 #results {
   min-height: 100vh;
-  background-color: #0f1025;
+  background-color: $beige;
   display: flex;
   justify-content: center;
 }
@@ -674,7 +739,7 @@ PAGE DASHBOARD
 }
 .title-results{
   font-size: 2.6rem;
-  color: #4e508d;
+  color: $bleu;
   text-align: left;
   letter-spacing: 11px;
   font-weight: bold;
@@ -682,10 +747,10 @@ PAGE DASHBOARD
 .separate{
   height: 1px;
   width: 50%;
-  background-color: #4e508d;
+  background-color: $bleu;
 }
 .reveal-results{
-  color: #4e508d;
+  color: $bleu;
   font-size: 1rem;
   margin-top: 5vh;
   letter-spacing: 7px;
@@ -703,12 +768,12 @@ PAGE DASHBOARD
   height: 100%;
 }
 .content-results{
-  color: #4e508d;
+  color: $bleu;
   margin-bottom: 3vh;
   max-width: 650px;
 }
 .conseil-results{
-  color: #4e508d;
+  color: $bleu;
   margin-bottom: 5vh;
   font-weight: bold;
   max-width: 650px;
@@ -726,13 +791,10 @@ PAGE DASHBOARD
   justify-content: center;
   text-decoration: none;
   display: inline-block;
-  padding-bottom: 1.8vh;
-  padding-top: 1.8vh;
-  padding-left: 5vh;
-  padding-right: 5vh;
+  padding: 1.8vh 5vh;
   font-size: 3vw;
-  color:#f2889b;
-  border: 1.5px solid#f2889b;
+  color: $rose;
+  border: 1.5px solid $rose;
   border-radius: 8px 10px;
   font-family: "Gotham Bold";
   text-transform: uppercase;
@@ -744,7 +806,7 @@ PAGE DASHBOARD
 }
 .btn:hover {
   // background-color:#f2889b;
-  color: #4e508d;
-  border: 1.5px solid#4e508d;
+  color: $bleu;
+  border: 1.5px solid $bleu;
 
 }
