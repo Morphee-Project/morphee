@@ -2,7 +2,7 @@ import React from 'react';
 import {Line} from 'react-chartjs-2';
 
 const data = {
-    labels: ['1960', '1970', '1980', '1990', '2000', '2010', '2020'],
+    labels: ['Ensemble', 'Hommes', 'Femmes', '18-24 ans', '25-34 ans', '35-44 ans', '45-54 ans', '65-75 ans'],
     legend : {
         display: true,
         labels: {
@@ -11,7 +11,7 @@ const data = {
     },
     datasets: [
         {
-            label: 'Temps de sommeil',
+            label: 'Sommeil moyens France 2010',
             fill: false,
             lineTension: 0.1,
             backgroundColor: 'rgba(242, 136, 155, 0.6)',
@@ -29,7 +29,28 @@ const data = {
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data: [80, 81, 72, 69, 64, 60, 57]
+            data: [7.10, 7.03, 7.17, 7.27, 7.13, 7.02, 6.59, 7.10, 7.18]
+        },
+        {
+            label: 'Sommeil moyens France 2017',
+            fill: false,
+            lineTension: 0.1,
+            backgroundColor: 'rgb(70,85,108)',
+            borderColor: 'rgb(70,85,108)',
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: 'rgb(70,85,108)',
+            pointBackgroundColor: 'rgb(70,85,108)',
+            pointBorderWidth: 10,
+            pointHoverRadius: 15,
+            pointHoverBackgroundColor: 'rgb(70,85,108)',
+            pointHoverBorderColor: 'rgba(220,220,220,1)',
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data: [7.09, 7.00, 7.16, 7.15, 7.14, 7.02, 6.52, 7.09, 7.26]
         }
     ]
 };
