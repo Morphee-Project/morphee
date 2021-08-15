@@ -509,41 +509,124 @@ PAGE DASHBOARD
 
 .body-content {
   padding-top: 110px;
+  padding-left: 25px;
+  padding-right: 25px;
 
   h1 {
-    font-size: 2.8rem;
-    font-weight: 600;
+    font-size: 2.4rem;
+    font-weight: 400;
     color: $gris;
     margin: 30px 0;
   }
 
-  p {
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: $gris;
-    width: 60%;
-  }
-
   form {
+    margin-top: 40px;
+    margin-left: 25px;
+
     label {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
       display: block;
       margin-top: 30px;
+    }
+    select {
+      border: solid 1px #46556C;
+      padding: 8px 14px;
+      background: transparent;
     }
     .submit {
       display: none;
     }
   }
 
+  .container-effect {
+    display: flex;
+    justify-content: center;
+    margin: 50px 25px 40px 25px;
+
+    .container-img {
+      width: 40%;
+    }
+
+    .slider-left {
+        width: 60%;
+
+      .slider-effect {
+        transition: height 500ms ease-in-out;
+      }
+      .slider-2, .slider-3 {
+        opacity: 0;
+        height: 0;
+      }
+
+      .slick-slide {
+        padding: 0 15px;
+      }
+
+      .sub-container {
+        margin-bottom: 10px;
+        span {
+          display: block;
+          margin-bottom: 3px;
+        }
+      }
+
+      p {
+        font-size: 13px;
+        font-weight: 400;
+      }
+
+      .slick-arrow {
+        z-index: 999;
+      }
+
+      .slick-arrow:before {
+        color: #46556C!important;
+      }
+
+      .slick-dots li.slick-active button::before {
+        color: #46556C!important;
+      }
+
+    }
+
+    .slider-right {
+      width: 40%;
+
+      img {
+        position: relative;
+        max-height: 500px;
+        margin: 0 auto;
+      }
+      .block {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: $rose;
+        transition: all 1s ease-in-out;
+      }
+      .block-1 {
+        top: 15%;
+        left: 50%;
+      }
+      .block-2 {
+        top: 30%;
+        left: 50%;
+      }
+      .block-3 {
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+
   .container-img {
     display: flex;
     position: relative;
-    height: calc(100vh - 110px);
     img {
       position: relative;
-      height: 100%;
-      margin: auto;
+      max-height: 500px;
+      margin: 0 auto;
     }
     .block {
       position: absolute;

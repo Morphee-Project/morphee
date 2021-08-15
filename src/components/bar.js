@@ -25,7 +25,6 @@ export default class BarExample extends React.Component {
                     width={100}
                     height={50}
                 />
-                <span className="number">16%</span>
             </div>
         )
     }
