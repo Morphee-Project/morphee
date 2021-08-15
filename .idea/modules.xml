@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/morphee.iml" filepath="$PROJECT_DIR$/.idea/morphee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Morphee.iml" filepath="$PROJECT_DIR$/.idea/Morphee.iml" />
     </modules>
   </component>
 </project>
