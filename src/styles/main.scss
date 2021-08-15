@@ -42,7 +42,7 @@ HEADER & FOOTER
   justify-content: space-between;
   background-color: $beige;
   padding: 10px;
-  box-shadow: 1px 5px 5px rgba(1, 1, 5, .07);
+  box-shadow: 1px 5px 5px rgba(1, 1, 5, 0.03);
   #logo{
     display: flex;
     flex-direction: row;
@@ -262,8 +262,9 @@ PAGE D'ACCUEIL
 
   .home-section {
     justify-content: center;
+    align-items: center;
     box-shadow: 1px 1px 1px rgba($gris, 0.1);
-    flex-flow: row-reverse wrap;
+    flex-flow: column-reverse;
     p {
       font-size: 18px;
       text-align: justify;
@@ -272,13 +273,16 @@ PAGE D'ACCUEIL
       padding: 0 50px;
     }
   }
+  .barline {
+    flex-flow: column;
+  }
   .bar-container{
-    max-width: 600px;
+    max-width: 660px;
     background: #f2f2f2;
     canvas{
       width: 50% !important;
       height: auto!important;
-      min-width: 600px;
+      min-width: 650px;
     }
     .number {
        font-size: 3rem;
@@ -308,16 +312,41 @@ PAGE D'ACCUEIL
 
   .doughnut-section{
     background: $rose;
-  }
-  .doughnut-container canvas{
-    width: 100% !important;
-    height: auto!important;
+    .chart-legend {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .doughnut-container{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        canvas {
+          width: 50% !important;
+          min-width: 600px;
+        }
+      }
+    }
+    p{
+      min-width: 100%;
+      margin-bottom: 50px;
+    }
   }
   .home-section p{
-    display: flex;
-    align-items: center;
     color: $gris;
     text-align: justify;
+  }
+}
+
+.sommeil-monde{
+  display: flex;
+  flex-direction: column;
+  h2{
+    width: max-content;
+  }
+  .iframe{
+    text-align: center;
+    width: 100%;
   }
 }
 /*
