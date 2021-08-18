@@ -10,9 +10,15 @@ import D3chart from "../components/d3Chart";
 class Results extends Component{
     constructor(props) {
         super(props);
+        this.state = {
+            firstBlock : ''
+        };
     }
 
     componentDidMount() {
+
+        this.showAnswer();
+
         fetch( process.env.REACT_APP_MAIN_SERVER_API + "/quiz", {
             method: 'POST',
             headers: {
@@ -60,7 +66,7 @@ class Results extends Component{
                         result: result
                     });
                     console.log(result);
-                    console.log(JSON.parse(sessionStorage.getItem('answers')))
+                    console.log(JSON.parse(sessionStorage.getItem('answers')));
                 },
                 (error) => {
                     this.setState({
@@ -69,6 +75,25 @@ class Results extends Component{
                     });
                 }
             )
+    }
+
+    showAnswer() {
+
+        var user_answers = JSON.parse(sessionStorage.getItem('answers'));
+        console.log('showAnswers');
+
+        var contentFirstBlock = '';
+
+        if(user_answers[1].value == "3" || user_answers[1].value == "4") {
+            contentFirstBlock = '<span> Nous vous conseillons de vous endormir un peu plus tôt</span>'
+
+        } else {
+            contentFirstBlock = '<span>.</span>'
+        }
+
+        this.setState({
+            firstBlock: contentFirstBlock
+        });
     }
 
     createDynamicDiagram() {
@@ -98,7 +123,7 @@ class Results extends Component{
                 </div>
                 
                 <div className="content-results">
-                    Lorem ipsum
+                    {this.state.firstBlock}
                 </div>
 
                 <D3chart/>
@@ -112,7 +137,6 @@ class Results extends Component{
                 <div className="retour">
                     <a className="btn">RETOUR</a>
                 </div>
-                
 
             </div>
         </div>

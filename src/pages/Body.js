@@ -123,7 +123,7 @@ class Body extends Component {
 
                 <div className="body-content col-12">
                     <div>
-                        <h1>Les effets du manque sommeil sur votre corps</h1>
+                        <h1>Les effets du manque de sommeil sur votre corps</h1>
                     </div>
                     <form onSubmit={this.handleSubmit}>
                         <label>
