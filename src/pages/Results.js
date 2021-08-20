@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Header from "../components/header";
-import body_woman from "../moon-morphee.png";
+import moon_morphee from "../moon-morphee.png";
 import no_phone from "../images/noun_No-Phone.png";
 import { Link } from 'react-router-dom'
 
@@ -231,78 +231,86 @@ class Results extends Component{
         const dataHourToSleep = [1, 5, 26, 44, 15, 7, 2, 1];
 
         return(
-        <div id="results">
+        <div>
             <Header/>
-            <div className="container-results">
-                <div className="top-results">
-                    <div className="left-results">
-                        <span className="title-results">CONNAISSEZ-VOUS VOTRE SOMMEIL ?</span>
-                        <div className="separate"></div>
-                        <div className="reveal-results">
-                            {this.state.tempsSommeil > 7
-                                ? "RESULTATS : Vous semblez dormir suffisament"
-                                : "RESULTATS : Vous êtes en manque de sommeil"}
+            <div id="results">
+                <div className="container-results">
+                    <div className="top-results">
+                        <div className="left-results">
+                            <span className="title-results">CONNAISSEZ-VOUS VOTRE SOMMEIL ?</span>
+                            <div className="separate"></div>
+                            <div className="reveal-results">
+                                {this.state.tempsSommeil > 7
+                                    ? "RESULTATS : Vous semblez dormir suffisament"
+                                    : "RESULTATS : Vous êtes en manque de sommeil"}
+                            </div>
                         </div>
-                    </div>
-                    <div className="container-icon">
-                        <img src={body_woman} className="icon"></img>
-                    </div>
-                </div>
-                
-                <div className="content-results">
-                    <div className="result result_1">
-                        <div className="text">
-                            <span className="answer_title">{this.state.titleFirstBlock}</span>
-                            <span>{this.state.firstBlock}</span>
-                        </div>
-                        <div className="chart_first">
-                            <BarExample/>
-                        </div>
-
-                    </div>
-
-                    <div className="result result_2">
-                        <div className="text">
-                            <span className="answer_title">{this.state.titleSecondBlock}</span>
-                            <span>{this.state.secondBlock}</span>
-                        </div>
-                        <div className="chiffre">
-                            <img src={no_phone} alt=""/>
+                        <div className="container-icon">
+                            <img src={moon_morphee} className="icon"></img>
                         </div>
                     </div>
 
-                    <div className="result result_3">
-                        <div className="chiffre">
+                    <div className="content-results">
+                        <div className="result result_1">
+                            <div className="text">
+                                <span className="answer_title">{this.state.titleFirstBlock}</span>
+                                <span>{this.state.firstBlock}</span>
+                            </div>
+                            <div className="chart_first">
+                                <BarExample/>
+                            </div>
+
+                        </div>
+
+                        <div className="result result_2">
+                            <div className="text">
+                                <span className="answer_title">{this.state.titleSecondBlock}</span>
+                                <span>{this.state.secondBlock}</span>
+                            </div>
+                            <div className="chiffre">
+                                <img src={no_phone} alt=""/>
+                            </div>
+                        </div>
+
+                        <div className="result result_3">
+                            <div className="chiffre">
                                 <h5>Temps moyen de sommeil en France</h5>
                                 <h3>6h42</h3>
+                            </div>
+                            <div className="text">
+                                <span className="answer_title">{this.state.titleThirdBlock}</span>
+                                <span>{this.state.thirdBlock}</span>
+                            </div>
                         </div>
-                        <div className="text">
-                            <span className="answer_title">{this.state.titleThirdBlock}</span>
-                            <span>{this.state.thirdBlock}</span>
+                        <div className="chart_third">
+                            <LineExample/>
                         </div>
-                    </div>
-                    <div className="chart_third">
-                        <LineExample/>
+
+                        <div className="result result_4">
+                            <div className="text">
+                                <span className="answer_title">{this.state.titleFourthBlock}</span>
+                                <span>{this.state.fourthBlock}</span>
+                                <ul>
+                                    <li>Éteindre son téléphone pour ne pas être dérangé</li>
+                                    <li>Éviter les boissons contenant beaucoup de sucre, caféine ou théine le soir</li>
+                                    <li>Éviter de consommer de l’alcool et un diner trop copieux </li>
+                                    <li>Soigner son environnement de sommeil: silencieux, avec une bonne obscurité et confortable</li>
+                                    <li>Faire du sport (sauf en soirée) pour faciliter l’endormissement</li>
+                                </ul>
+
+                                <div className="retour">
+                                    <span>Si vous désirez des conseils supplémentaires, c'est par ici </span>
+                                    <Link to="/conseils" className="btn">DÉCOUVRIR</Link>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div className="result result_4">
-                        <div className="text">
-                            <span className="answer_title">{this.state.titleFourthBlock}</span>
-                            <span>{this.state.fourthBlock}</span>
-                            <ul>
-                                <li>Éteindre son téléphone pour ne pas être dérangé</li>
-                                <li>Éviter les boissons contenant beaucoup de sucre, caféine ou théine le soir</li>
-                                <li>Éviter de consommer de l’alcool et un diner trop copieux </li>
-                                <li>Soigner son environnement de sommeil: silencieux, avec une bonne obscurité et confortable</li>
-                                <li>Faire du sport (sauf en soirée) pour faciliter l’endormissement</li>
-                            </ul>
-                        </div>
+                    <div className="retour">
+                        <Link to="/home" className="btn"> RETOUR ACCUEIL</Link>
                     </div>
 
-                </div>
-
-                <div className="retour">
-                    <Link to="/home" className="btn">RETOUR</Link>
                 </div>
 
             </div>

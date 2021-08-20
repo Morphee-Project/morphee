@@ -6,7 +6,8 @@ import {
     Route
 } from "react-router-dom";
 import HomePage from '../src/pages/Home'
-import Dashboard from "./pages/Dashboard";
+//import Dashboard from "./pages/Dashboard";
+import Conseils from "./pages/Conseils";
 import Body from "./pages/Body";
 import Effect from "./pages/Effect";
 import Quiz from "./pages/Quiz";
@@ -24,8 +25,8 @@ function App() {
               <Route path="/Results">
                   <Results />
               </Route>
-              <Route path="/dashboard">
-                  <Dashboard />
+              <Route path="/conseils">
+                  <Conseils />
               </Route>
               <Route path="/effect">
                   <Effect />
