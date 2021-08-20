@@ -224,7 +224,6 @@ class Results extends Component{
         var global_result = {};
 
         this.getAllAnswer()
-
     }
 
     render(){
