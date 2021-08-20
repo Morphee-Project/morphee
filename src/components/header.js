@@ -15,7 +15,6 @@ class Menu extends React.Component {
                     <Link to="/home">Accueil</Link>
                     <Link to="/body">Effet sur le corps</Link>
                     <Link to="/quiz">Quiz</Link>
-                    <Link to="/effect">Conséquences</Link>
                     <Link to="/conseils">Conseils</Link>
                 </div>
             </header>
