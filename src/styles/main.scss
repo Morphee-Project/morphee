@@ -887,7 +887,7 @@ PAGE DASHBOARD
   color: $bleu;
   font-size: 1rem;
   margin-top: 5vh;
-  letter-spacing: 7px;
+  letter-spacing: 2px;
   margin-top: 5vh;
 }
 .container-icon{
@@ -904,7 +904,78 @@ PAGE DASHBOARD
 .content-results{
   color: $bleu;
   margin-bottom: 3vh;
-  max-width: 650px;
+
+  .result {
+    margin: 120px 0;
+
+    .answer_title {
+      display: block;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      max-width: 80%;
+    }
+    span {
+      display: block;
+    }
+  }
+  .result_1 {
+    max-width: 650px;
+    margin-top: 25px!important;
+    .text {
+      margin-bottom: 25px;
+    }
+  }
+  .result_2 {
+    display: flex;
+    justify-content: space-around;
+    img {
+      width: 100%;
+      max-width: 150px;
+    }
+    .text {
+      max-width: 650px;
+    }
+    .chiffre {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .result_3 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px!important;
+    .text {
+      max-width: 650px;
+    }
+    .chiffre {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 25px 0 0;
+      h5 {
+        text-align: center;
+      }
+      h3 {
+        font-weight: 800;
+      }
+    }
+  }
+  .result_4 {
+    margin-bottom: 25px!important;
+    ul {
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+  }
+  .chart_first {
+    margin: auto;
+  }
+  .chart_third {
+    margin: auto;
+    max-width: 650px;
+  }
 }
 .conseil-results{
   color: $bleu;
@@ -918,29 +989,26 @@ PAGE DASHBOARD
   display: flex;
   justify-content: center;
 }
-.btn {
-  margin-bottom: 3vh;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
+.retour .btn {
+  background: #f2f2f2;
+  border-radius: 30px;
   text-decoration: none;
-  display: inline-block;
-  padding: 1.8vh 5vh;
-  font-size: 3vw;
-  color: $rose;
-  border: 1.5px solid $rose;
-  border-radius: 8px 10px;
-  font-family: "Gotham Bold";
-  text-transform: uppercase;
-  cursor: pointer;
+  color: #303A43;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 30px;
+  width: max-content;
+  margin-left: 3rem;
+  margin-bottom: 50px;
 
   @media only screen and (min-width: 768px) {
     font-size: 1.5vh;
   }
 }
-.btn:hover {
+.retour .btn:hover {
   // background-color:#f2889b;
-  color: $bleu;
-  border: 1.5px solid $bleu;
-
+  background: #303A43;
+  color: #f2f2f2;
+  transition: 0.2s;
 }

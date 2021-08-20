@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from "../logo.svg";
 import {Doughnut} from "react-chartjs-2";
-import BarExample from "../components/bar";
 import Line from "../components/line";
 import Header from "../components/header";
 import Footer from "../components/footer";

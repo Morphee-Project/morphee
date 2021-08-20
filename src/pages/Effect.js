@@ -1,8 +1,6 @@
 import React from 'react';
 import logo from "../logo.svg";
 import woman from "../images/img_femme_corps-morphee.png";
-import {Bar, Doughnut} from "react-chartjs-2";
-import BarExample from "../components/bar";
 import Header from "../components/header";
 import Footer from "../components/footer";
 

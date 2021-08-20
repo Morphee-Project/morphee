@@ -131,8 +131,8 @@ class Body extends Component {
                         </label>
                             <select value={this.state.value} onChange={this.handleChange}>
                                 <option selected value="1">moins de 5 heures</option>
-                                <option value="2">entre 5 à 6 heures</option>
-                                <option value="3">entre 6 et 9 heures</option>
+                                <option value="2">entre 5 à 7 heures</option>
+                                <option value="3">plus de 7 heures</option>
                             </select>
 
                         <input className="submit" type="submit" value="Envoyer" />
@@ -232,43 +232,6 @@ class Body extends Component {
                             </Slider>
 
                         </div>
-
-                        {/*
-                        <div className="container-img">
-                            <img src={body_woman} className="body_img" alt="Corps humain" />
-                            <div className="block block-1" onMouseEnter={this.handleMouseHover}
-                                 onMouseLeave={this.handleMouseHover}>
-                                {
-                                    this.state.isHovering &&
-                                    <div className="text-block text-block-1">
-                                        <h5>Usure du cerveau</h5>
-                                        <p>Lorsque nous dormons, le cerveau régénère les cellules qui lui permettent de “récupérer les énergies” et prévenir les maladies. Si nous ne nous reposons pas assez, il ne peut pas nettoyer les protéines qui provoquent les plaques d’Alzheimer ou la démence.</p>
-                                    </div>
-                                }
-                            </div>
-
-                            <div className="block block-2" onMouseEnter={this.handleMouseHover2}
-                                 onMouseLeave={this.handleMouseHover2}>
-                                {
-                                    this.state.isHovering2 &&
-                                    <div className="text-block text-block-2">
-                                        <h5>Manque de réflexes</h5>
-                                        <p>Le rendement cognitif et la coordination motrice diminuent de façon considérable quand une personne n’a pas suffisamment dormi. Selon la National Highway Traffic Safety Administration (NHTSA, en anglais) des États-Unis, plus de quarante mille personnes souffrent de blessures chaque année. Et ce, à cause de problèmes dus au manque de sommeil.</p>
-                                    </div>
-                                }
-                            </div>
-
-                            <div className="block block-3"  onMouseEnter={this.handleMouseHover3}
-                                 onMouseLeave={this.handleMouseHover3}/>
-                            {
-                                this.state.isHovering3 &&
-                                <div className="text-block text-block-2">
-                                    <h5>Meilleur rendement</h5>
-                                    <p>Comme conséquence du manque de lucidité et d’énergie, en dormant peu nous nous exposons à la diminution considérable de nos capacités. Ceux qui ne se reposent pas suffisamment ont tendance à donner moins de résultats dans les milieux professionnel.</p>
-                                </div>
-                            }
-                        </div>
-                        */}
                     </div>
 
                 </div>

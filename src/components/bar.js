@@ -2,18 +2,50 @@ import React, {Component} from 'react';
 import {Bar} from 'react-chartjs-2';
 
 const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['20h-21h', '21h-22h', '22h-23h', '23h-0h', '0h-1h', '1h-2h', '2h-3h', '3h-4h'],
+    legend : {
+        display: true,
+        labels: {
+            fontColor: 'rgb(255,255,255)'
+        }
+    },
+    y: 1,
     datasets: [
         {
-            label: 'My First dataset',
-            backgroundColor: 'rgba(255,99,132,0.2)',
-            borderColor: 'rgba(255,99,132,1)',
+            label: 'L\'heure du coucher des français (en pourcentage)',
+            backgroundColor: 'rgba(70,85,108,0.6)',
+            borderColor: 'rgba(70,85,108,1)',
             borderWidth: 1,
-            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-            hoverBorderColor: 'rgba(255,99,132,1)',
-            data: [65, 59, 80, 81, 56, 55, 40]
+            hoverBackgroundColor: 'rgba(70,85,108,0.4)',
+            hoverBorderColor: 'rgba(70,85,108,1)',
+            data: [1, 5, 26, 44, 15, 7, 2, 1],
+            z: 1
         }
-    ]
+    ],
+
+};
+
+const legend = {
+    display: true,
+    labels: {
+        fontColor: 'rgb(29,29,38)'
+    }
+}
+
+const config = {
+    options: {
+        tooltips: {
+            enabled: false,
+        },
+        legend: {
+            display: false
+        },
+        scales: {
+            xAxes: [{display: false}],
+            yAxes: [{display: false}],
+        }
+    }
+
 };
 
 export default class BarExample extends React.Component {
@@ -24,6 +56,8 @@ export default class BarExample extends React.Component {
                     data={data}
                     width={100}
                     height={50}
+                    options={config}
+                    legend={legend}
                 />
             </div>
         )
