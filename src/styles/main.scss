@@ -273,7 +273,7 @@ PAGE D'ACCUEIL
       font-size: 18px;
       text-align: justify;
       font-weight: 500;
-      max-width: 900px;
+      max-width: 800px;
     }
   }
   .barline {
@@ -304,7 +304,6 @@ PAGE D'ACCUEIL
       height: auto!important;
       min-width: 250px;
       max-width: 800px;
-      padding: 0 3rem;
     }
     .number {
        font-size: 3rem;
@@ -328,6 +327,16 @@ PAGE D'ACCUEIL
     min-width: 250px;
     padding: 30px 3rem;
     text-align: center;
+    .banner_items{
+      width: 210px;
+      margin: 20px;
+      h5 {
+        font-size: 16px;
+      }
+      span {
+        font-size: xx-large;
+      }
+    }
   }
 
   .doughnut-section{
@@ -411,9 +420,9 @@ PAGE D'ACCUEIL
     text-align: center;
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
         p{
           max-width: 655px;
           text-align: justify;

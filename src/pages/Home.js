@@ -74,7 +74,7 @@ function Home() {
                         <Line/>
                         <br/>
                     </div>
-                    <button onClick={handleClick}>Source: Bulletin épidémiologique hebdomadaire.</button>
+                    <button onClick={handleClick}>Source: Bulletin épidémiologique hebdomadaire</button>
                 </div>
 
                 <div className="home-middle-banner col-12">
